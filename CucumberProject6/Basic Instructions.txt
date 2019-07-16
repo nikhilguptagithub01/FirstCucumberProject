@@ -1,0 +1,83 @@
+(Please open the file in notepad ++ for better view otherwise notepad)
+
+BASIC INSTRUCTIONS - 
+
+1. Open Eclipse IDE
+2. Add Cucumber Plugin 
+	Go to Help menu -> Install Software -> Enter https://cucumber.github.io/cucumber-eclipse/update-site and Enter
+3. Download the project from github link - https://github.com/nikhilguptagithub01/FirstCucumberProject.git
+4. Place the project under eclipse workspace
+5. Go to Eclipse IDE and refresh the explorer -> you would see the project under project explorer
+6. Expand followings folders and their sub-packages under them- 
+	- src/main/java 
+			----> This has two java files -
+					----> "extentmanager.java" for Extent Report and 
+					----> "WebConnector.java" for webdriver control
+	- src/test/java 
+			----> This has four java files -
+					----> two are runner class, one each for Junit and TestNG, these are "JunitRunner.java" and "TestNGRunner.java" files and 
+							Note that these runner class executes the whole program.
+					----> two are steps definition class, one for general steps and other for application steps definition
+	- src/test/resource 
+			----> This has four feature files - L.
+					----> Login feature file represent login scenario
+					----> Order T-Shirt feature file represent ordering T-Shirt scenario
+					----> Register feature file represent registration scenario
+					----> update personal information feature file represent updation of first name scenario
+			----> it also has properties files under it which is used for taking inputs in the program
+			
+Optional Step: Go to POM.XML file which you can locate at the bottom of the project, you need to double click to open it and then press the "effective POM" tab from the bottom of the right pane (where code is visible). This will resolve all the dependecies required for the project if 5th steps in above doesn't resolves it.
+
+7. Under extent report and target folder, you can find different types of reports (such as Junit report, TestNG report, html report and json report) are generated
+
+8. Two more folders - 
+			----> BrowserDriver folder will contain three different browser - Mozilla, Chrome and IE
+			----> Selenium Server folder will contain standalone selenium server for running jobs in remote machine using selenium grid feature.So to support this, there three files that you can find in the project with the names are - grid.txt, node1.json and node2.json
+			
+9. To download TestNG eclipse plugin, go to Marketplace from Help menu and search for testng, and install it if you want to run it using testng as I created a runner.class for testng as well else you can just run with Junit using Junit runner class file.
+
+IMPORTANT INSTRUCTIONS - 
+
+1. project.properties file under src/test/resource; where you need to set the input parameter which will be used during execution of the scenario.
+
+2. To run "Login Scenario", you can set the registered login email id and password else leave the default value present in the properties file. 
+
+3. To run "Registration Scenario", you can set the registration details else leave the default value present in the properties file. Just modify the email id in the number place, you can increase the numnber, that's it.
+
+4. To run order t-shirt scenario, to place a order more than 1, set the qty parameter with plus(+) sign and increase by number while incase of decrease set it with minus (-) sign followed by number. Also you can set the payment method either to - pay by wire or pay by check method.
+
+5. To run "Update personal information (first name) scenario", you can change the first name to any other name in the properties file
+
+6. You can set the browser in the properties file to which you want to run - Chrome, Mozilla and InternetExplorer
+
+Optional step - If you want to on different machine then follow below instructions - 
+
+				a) Set the grid paramete in properties to "Y" from "N"
+				b) To run on IE 11 browser, please disable protected mode for all the zones/domain by going into Internet Options - security tab.
+				c) Open grid file from the project
+				d) And open three different command, set the project/current folder path in all the three command prompt
+				e) Then run each command from grid files into three different command prompt that opened in above steps
+				f) Go to browser and type - http://localhost:4444/ and then click console on the page
+				g) finally follow the below mentioned two steps for running/executing the scenario
+
+Note that, I have drawn a line in the properties file which separate parameters for each scenario that avoids ambiguity. It will be clear to you once you see it.
+
+HOW TO RUN/EXECUTE:
+
+1. If you want to run using Junit then chose JunitRunner java file under src/test/java otherwise TestNGRunner java file. 
+2. And right click and select Run As Junit or TestNG based on which file you choose to run
+
+Note that all the four scenario takes 4-5 mins in complete run on Chrome/Mozilla. IE may takes little longer time.
+For the first run, you don't have to change any value, I already changed and sent across to you but still if one want then can.
+
+
+FURTHER IMPROVEMENTS IN THE FRAMEWORK:
+
+1) Assertion can be used in the program
+2) More error handling can be included
+3) parallel run of the scenario can be included
+4) running on different machines (already implemented)
+5) Integration with Jenkins and GITHUB can be explored
+6) Running via MAVEN surefile plugin and ANT
+7) Report generation (however, I implemented EXTENT report)
+8) Better the Screenshot capturing facility such that full page view takes it (However I implemented it to visible window but not full page I tried using AShot but couldn't succeed)

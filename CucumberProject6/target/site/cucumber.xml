@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="253.05203">
+    <testcase classname="Login into web portal" name="Login into Online Shopping portal" time="23.37406">
+        <system-out>
+            <![CDATA[Given I open browsername....................................................passed
+When I launch URL of Online Shopping portal.................................passed
+And I click on Sign_In_Link.................................................passed
+And I am taken inside sign-in page..........................................passed
+And I enter my registered email id..........................................passed
+And I enter my password.....................................................passed
+And I click on Sign_In_Submit_Btn...........................................passed
+Then I am taken inside the application......................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Order T-Shirt and verify in your order history" name="Order T-Shirt from Online Shopping Portal" time="58.210364">
+        <system-out>
+            <![CDATA[Given I open browsername....................................................passed
+When I launch URL of Online Shopping portal.................................passed
+And I click on Sign_In_Link.................................................passed
+And I am taken inside sign-in page..........................................passed
+And I enter my registered email id..........................................passed
+And I enter my password.....................................................passed
+And I click on Sign_In_Submit_Btn...........................................passed
+Then I am taken inside the application......................................passed
+Given I am on online shopping My Account - My Store page....................passed
+When I want to buy T-Shirt then I click on TShirt_Link_Xpath................passed
+And I am taken into T-Shirt shopping page...................................passed
+And I choose a T-Shirt of my choice and add to cart.........................passed
+But I select proceed to checkout instead continuing shopping option.........passed
+And I am taken into shopping cart summary page..............................passed
+And I click on shopping_cart_summary_page_proceed_To_CheckOut_xpath.........passed
+And I am taken to choose a delivery address page where I select my office_delivery_address and then proceed to checkout option.passed
+And I landed to a shipping page where I acknowledge the terms and condition and click to proceed to checkout.passed
+And I am taken into payment option page where I proceed to pay by chossing one of payment_option.passed
+And I confirm my order and capture the order reference details..............passed
+Then I click back to order from order confimation page to verify the placed order.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Order T-Shirt and verify in your order history" name="Order T-Shirt from Online Shopping Portal 2" time="55.903865">
+        <system-out>
+            <![CDATA[Given I open browsername....................................................passed
+When I launch URL of Online Shopping portal.................................passed
+And I click on Sign_In_Link.................................................passed
+And I am taken inside sign-in page..........................................passed
+And I enter my registered email id..........................................passed
+And I enter my password.....................................................passed
+And I click on Sign_In_Submit_Btn...........................................passed
+Then I am taken inside the application......................................passed
+Given I am on online shopping My Account - My Store page....................passed
+When I want to buy T-Shirt then I click on TShirt_Link_Xpath................passed
+And I am taken into T-Shirt shopping page...................................passed
+And I choose a T-Shirt of my choice and add to cart.........................passed
+But I select proceed to checkout instead continuing shopping option.........passed
+And I am taken into shopping cart summary page where I revisit my quantity..passed
+And I click on shopping_cart_summary_page_proceed_To_CheckOut_xpath.........passed
+And I am taken to choose a delivery address page where I select my office_delivery_address and then proceed to checkout option.passed
+And I landed to a shipping page where I acknowledge the terms and condition and click to proceed to checkout.passed
+And I am taken into payment option page where I proceed to pay by chossing one of payment_option.passed
+And I confirm my order and capture the order reference details..............passed
+Then I click back to order from order confimation page to verify the placed order.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Register User on automation practice online shopping portal" name="User create an account" time="89.702639">
+        <system-out>
+            <![CDATA[Given I open browsername....................................................passed
+When I launch URL of Online Shopping portal.................................passed
+And I click on Sign_In_Link.................................................passed
+And I am taken inside sign-in page..........................................passed
+And I enter email id for registration.......................................passed
+And I click on create_an_account_button_xpath...............................passed
+And I am on create an account page..........................................passed
+And I select my salutation..................................................passed
+And enter first name........................................................passed
+And enter last name.........................................................passed
+And set your password.......................................................passed
+And select day..............................................................passed
+And select month............................................................passed
+And select year.............................................................passed
+And enter company...........................................................passed
+And enter address...........................................................passed
+And enter city..............................................................passed
+And select state............................................................passed
+And enter zipcode...........................................................passed
+And select country..........................................................passed
+And enter mobile number.....................................................passed
+And enter address alias.....................................................passed
+And I click on register_button_xpath........................................passed
+Then I am taken to My Account page..........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Update Personal Information" name="Update Personal Information (first name) in My Account" time="25.861102">
+        <system-out>
+            <![CDATA[Given I open browsername....................................................passed
+When I launch URL of Online Shopping portal.................................passed
+And I click on Sign_In_Link.................................................passed
+And I am taken inside sign-in page..........................................passed
+And I enter my registered email id..........................................passed
+And I enter my password.....................................................passed
+And I click on Sign_In_Submit_Btn...........................................passed
+Then I am taken inside the application......................................passed
+Given I am on online shopping My Account - My Store page....................passed
+When I click My Personal Information link...................................passed
+And I enter my changed first name...........................................passed
+And I enter my current password.............................................passed
+And I click on save_btn.....................................................passed
+Then The successful_personal_info_saved_message is displayed................passed
+And on top right corner, my change_fname can be verified....................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
